@@ -103,7 +103,8 @@ export const configDetailChart = (chartInstance: Chart, options: {
     })
     .line()
     .position('time*value')
-    .color('type', LINE_CHART_COLORS);
+    .color('type', LINE_CHART_COLORS)
+    .shape('smooth');
 
   if (options.isPercentValue) {
     chartInstance.axis('value', {

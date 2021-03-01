@@ -22,6 +22,7 @@ const SpaceBar = (props: ISpaceBarProps) => {
   const { name, percent, size: bytes } = props;
   const COLORS = getWhichColor(percent);
   const size = bytes && getMemoryProperSize(bytes);
+  const _percent = percent < 1 ? Number(percent.toFixed(2)) : percent;
   return <div className="space-bar">
     <p className="description">
       <span>{name}</span>
@@ -32,7 +33,7 @@ const SpaceBar = (props: ISpaceBarProps) => {
         <div className="left" style={{ backgroundColor: COLORS.SOLID }} />
         <div className="right" style={{ backgroundColor: COLORS.SOLID }} />
       </div>
-      <p>{Math.round(percent)}%</p>
+      <p>{_percent}%</p>
     </div>
   </div>;
 };
