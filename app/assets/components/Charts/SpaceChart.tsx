@@ -43,7 +43,7 @@ class SpaceChart extends React.Component<IProps> {
     const { data } = this.props;
     return <div className="nebula-chart nebula-chart-space">
       {
-        data?.map(instance => <SpaceBar key={instance.type} percent={instance.value} name={instance.type} size={instance.size} />)
+        data?.map(instance => <SpaceBar key={instance.type} percent={instance.value < 1 ? Number(instance.value.toFixed(2)) : Math.round(instance.value)} name={instance.type} size={instance.size} />)
       }
     </div>;
   }

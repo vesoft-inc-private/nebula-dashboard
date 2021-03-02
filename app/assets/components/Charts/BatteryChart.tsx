@@ -26,7 +26,7 @@ const Battery = (props:IBatteryProps) => {
   const n = Math.floor(value / 10);
   const m = value - n * 10;
   const color = getBatteryColor(value);
-  const _value = value < 1 ? Number(value.toFixed(2)) : value;
+  const _value = value < 1 ? Number(value.toFixed(2)) : Math.round(value);
 
   return <div className="nebula-battery">
     <div className="wrap">

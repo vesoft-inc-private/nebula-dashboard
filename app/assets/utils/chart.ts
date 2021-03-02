@@ -53,10 +53,6 @@ export const LINE_CHART_COLORS = [
   '#F4BCBC',
   '#BFBFBF',
   '#595959'
-<<<<<<< HEAD
-=======
-
->>>>>>> feat: add char color detail && flow detail grid
 ];
 
 export const configDetailChart = (chartInstance: Chart, options: {
